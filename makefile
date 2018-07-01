@@ -6,5 +6,6 @@
 
 
 install: found.sh	
+	chmod +x found.sh
 	sudo cp found.sh /usr/bin/found
 
