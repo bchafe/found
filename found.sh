@@ -3,35 +3,51 @@
 # Written by Benjamin Chafe
 
 dir=$1
+error="Usage: found [file or directory]"
 
-if [ -e $dir ]
+
+
+
+if [[ $dir == "" ]]
 then
   
-        
-  if [ -d $dir ]
+  
+  echo $error
+  
+
+ 
+
+else
+
+
+  if [ -e $dir ]
   then
   
         
-    echo $dir is a directory.
+    if [ -d $dir ]
+    then
   
+        
+      echo $dir is a directory.
+  
+
+    else
+  
+          
+      echo $dir is a file.
+  
+
+    fi
+
 
   else
   
-          
-    echo $dir is a file.
-  
+
+    echo $dir does not exist as a file or directory.
+
 
   fi
 
 
-else
-  
-
-  echo $dir does not exist as a file or directory.
-
-
 fi
-
-
-
 
