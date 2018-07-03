@@ -1,7 +1,8 @@
-#** found **
+#!/usr/bin/env bash
+# ** found **
 # A command used to check if a file or directory exists.
 # Written by Benjamin Chafe
-#!/usr/bin/env bash
+
 
 
 dir=$1
