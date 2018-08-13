@@ -1,13 +1,16 @@
-#!/usr/bin/env bash
-# ** found **
+#** found **
 # A command used to check if a file or directory exists.
 # Written by Benjamin Chafe
-
+#!/usr/bin/env bash
 
 
 dir=$1
 error="Usage: found [file or directory]"
 
+
+failure(){
+  return 1
+}
 
 
 
@@ -16,7 +19,7 @@ then
   
   
   echo $error
-  
+  failure
 
  
 
@@ -47,6 +50,7 @@ else
   
 
     echo $dir does not exist as a file or directory.
+    failure
 
 
   fi
