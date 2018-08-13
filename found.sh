@@ -8,10 +8,6 @@ dir=$1
 error="Usage: found [file or directory]"
 
 
-failure(){
-  return 1
-}
-
 
 
 if [[ $dir == "" ]]
@@ -19,7 +15,7 @@ then
   
   
   echo $error
-  failure
+  exit 1
 
  
 
@@ -50,7 +46,7 @@ else
   
 
     echo $dir does not exist as a file or directory.
-    failure
+    exit 1
 
 
   fi
